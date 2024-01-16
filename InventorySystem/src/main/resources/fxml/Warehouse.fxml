@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="942.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="se.lu.ics.controllers.WarehouseController">
+   <children>
+      <VBox prefHeight="548.0" prefWidth="129.0" styleClass="vboxSideMenu" stylesheets="@../css/application.css">
+         <children>
+            <Button fx:id="btnHome" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#btnHome_onClick" prefHeight="53.0" prefWidth="129.0" styleClass="vboxSideButton" stylesheets="@../css/application.css" text=" Home">
+               <VBox.margin>
+                  <Insets top="100.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/house-png-193.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="6.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnWarehouses" alignment="BASELINE_CENTER" mnemonicParsing="false" onAction="#btnWarehouses_onClick" prefHeight="53.0" prefWidth="129.0" style="-fx-background-color: #1061bd;" styleClass="vboxSideButton" stylesheets="@../css/application.css" text="Warehouses">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/warehouse-21-512.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets right="13.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnProducts" alignment="CENTER" mnemonicParsing="false" onAction="#btnProducts_onClick" prefHeight="53.0" prefWidth="129.0" styleClass="vboxSideButton" stylesheets="@../css/application.css" text=" Products">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/products%20-18-512.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets right="25.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnSuppliers" mnemonicParsing="false" onAction="#btnSuppliers_onClick" prefHeight="53.0" prefWidth="129.0" styleClass="vboxSideButton" stylesheets="@../css/application.css" text=" Suppliers">
+               <graphic>
+                  <ImageView fitHeight="39.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/supplier.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets right="25.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+      <Pane layoutX="163.0" layoutY="78.0" prefHeight="438.0" prefWidth="739.0" styleClass="contentPane" stylesheets="@../css/application.css">
+         <children>
+            <TableView fx:id="tblViewWarehouse" layoutY="28.0" onMouseClicked="#onRowClicked" prefHeight="364.0" prefWidth="587.0" stylesheets="@../css/application.css">
+              <columns>
+                <TableColumn fx:id="tblColumnId" prefWidth="118.0" text="ID" />
+                <TableColumn fx:id="tblColumnName" prefWidth="159.0" text="Name" />
+                  <TableColumn fx:id="tblColumnAddress" prefWidth="138.0" text="Address" />
+              </columns>
+            </TableView>
+            <TextField fx:id="txtFieldId" layoutX="618.0" layoutY="69.0" prefHeight="25.0" prefWidth="119.0" promptText="ID" />
+            <TextField fx:id="txtFieldName" layoutX="630.0" layoutY="103.0" prefHeight="25.0" prefWidth="107.0" promptText="Name" />
+            <TextField fx:id="txtFieldAddress" layoutX="589.0" layoutY="154.0" prefHeight="25.0" prefWidth="148.0" promptText="Address" />
+            <Button layoutX="589.0" layoutY="198.0" mnemonicParsing="false" onAction="#btnCreate_onClick" prefHeight="25.0" prefWidth="148.0" text="Create" />
+            <TextField fx:id="txtFieldSearch" layoutY="2.0" promptText="Search ID" />
+            <Button layoutX="149.0" layoutY="2.0" mnemonicParsing="false" onAction="#btnSearch_onClick" text="Search" />
+            <Button layoutX="589.0" layoutY="230.0" mnemonicParsing="false" onAction="#btnDelete_onClick" prefHeight="25.0" prefWidth="148.0" text="Delete" />
+            <Label fx:id="lblSelected" layoutX="649.0" layoutY="20.0" opacity="0.0" />
+            <Button layoutX="200.0" layoutY="2.0" mnemonicParsing="false" onAction="#btnAll_onClick" text="All" />
+            <Label layoutX="593.0" layoutY="73.0" text="ID:" />
+            <Label layoutX="593.0" layoutY="107.0" text="Name:" />
+            <Label layoutX="595.0" layoutY="137.0" text="Address:" />
+         </children></Pane>
+      <Text layoutX="163.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warehouses" wrappingWidth="196.13671875">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="942.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="se.lu.ics.controllers.HomeController">
+   <children>
+      <VBox prefHeight="548.0" prefWidth="129.0" styleClass="vboxSideMenu" stylesheets="@../css/application.css">
+         <children>
+            <Button fx:id="btnHome" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#btnHome_onClick" prefHeight="53.0" prefWidth="129.0" style="-fx-background-color: #1061bd;" styleClass="vboxSideButton" stylesheets="@../css/application.css" text=" Home">
+               <VBox.margin>
+                  <Insets top="100.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/house-png-193.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="6.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnWarehouses" alignment="BASELINE_CENTER" mnemonicParsing="false" onAction="#btnWarehouses_onClick" prefHeight="53.0" prefWidth="129.0" styleClass="vboxSideButton" stylesheets="@../css/application.css" text="Warehouses">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/warehouse-21-512.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets right="13.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnProducts" alignment="CENTER" mnemonicParsing="false" onAction="#btnProducts_onClick" prefHeight="53.0" prefWidth="129.0" styleClass="vboxSideButton" stylesheets="@../css/application.css" text=" Products">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/products%20-18-512.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets right="25.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnSuppliers" mnemonicParsing="false" onAction="#btnSuppliers_onClick" prefHeight="53.0" prefWidth="129.0" styleClass="vboxSideButton" stylesheets="@../css/application.css" text=" Suppliers">
+               <graphic>
+                  <ImageView fitHeight="39.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/supplier.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets right="25.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+      <Pane layoutX="163.0" layoutY="78.0" prefHeight="438.0" prefWidth="739.0" styleClass="contentPane" stylesheets="@../css/application.css">
+         <children>
+            <Pane layoutX="24.0" layoutY="87.0" prefHeight="331.0" prefWidth="695.0" styleClass="contentPane2" stylesheets="@../css/application.css">
+               <children>
+                  <Label layoutX="75.0" layoutY="20.0" text="Announcement" textFill="WHITE" underline="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/megaphone-13-256.png" />
+                     </image>
+                  </ImageView>
+                  <Pane layoutX="12.0" layoutY="67.0" prefHeight="70.0" prefWidth="234.0" styleClass="contentPaneAnnouncement">
+                     <children>
+                        <Label layoutX="7.0" layoutY="6.0" text="Topic: Meeting in the IT office!" />
+                        <Label layoutX="41.0" layoutY="23.0" prefHeight="28.0" prefWidth="200.0" text="An issue regarding the system-" />
+                        <Label layoutX="41.0" layoutY="43.0" text="has been brough to our attention!" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Label layoutX="14.0" layoutY="21.0" text="Welcome to ASH Warehouse Management System!">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+         </children></Pane>
+   </children>
+</AnchorPane>

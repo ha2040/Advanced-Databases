@@ -1,0 +1,34 @@
+/*
+. refers to style class 
+# refers to style id
+*/
+.vboxSideMenu{
+    -fx-background-color: linear-gradient(to bottom, #1565C0 0%, #2196F3 100%);
+}
+.vboxSideButton{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.contentPane{
+    -fx-background-color: white;
+}
+
+.anchorPane{
+    -fx-background-color: rgb(185, 185, 185);
+}
+
+.contentPane2 {
+    -fx-background-color: rgb(117, 165, 238);
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-border-width:5;
+}
+
+.contentPaneAnnouncement {
+    -fx-background-color: rgb(155, 193, 250);
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-width:5;
+}

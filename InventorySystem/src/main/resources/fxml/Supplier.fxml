@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="942.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="se.lu.ics.controllers.SupplierController">
+   <children>
+      <VBox prefHeight="548.0" prefWidth="129.0" styleClass="vboxSideMenu" stylesheets="@../css/application.css">
+         <children>
+            <Button fx:id="btnHome" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#btnHome_onClick" prefHeight="53.0" prefWidth="129.0" styleClass="vboxSideButton" stylesheets="@../css/application.css" text=" Home">
+               <VBox.margin>
+                  <Insets top="100.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/house-png-193.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="6.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnWarehouses" alignment="BASELINE_CENTER" mnemonicParsing="false" onAction="#btnWarehouses_onClick" prefHeight="53.0" prefWidth="129.0" styleClass="vboxSideButton" stylesheets="@../css/application.css" text="Warehouses">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/warehouse-21-512.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets right="13.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnProducts" alignment="CENTER" mnemonicParsing="false" onAction="#btnProducts_onClick" prefHeight="53.0" prefWidth="129.0" styleClass="vboxSideButton" stylesheets="@../css/application.css" text=" Products">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/products%20-18-512.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets right="25.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnSuppliers" mnemonicParsing="false" onAction="#btnSuppliers_onClick" prefHeight="53.0" prefWidth="129.0" style="-fx-background-color: #1061bd;" styleClass="vboxSideButton" stylesheets="@../css/application.css" text=" Suppliers">
+               <graphic>
+                  <ImageView fitHeight="39.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/supplier.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets right="25.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+      <Pane layoutX="163.0" layoutY="78.0" prefHeight="438.0" prefWidth="739.0" styleClass="contentPane" stylesheets="@../css/application.css">
+         <children>
+            <TableView fx:id="tblViewSupplier" layoutY="27.0" onMouseClicked="#onRowClicked" prefHeight="364.0" prefWidth="585.0" stylesheets="@../css/application.css">
+               <columns>
+                  <TableColumn fx:id="tblColumnSupplierId" prefWidth="72.0" text="SupplierId" />
+                  <TableColumn fx:id="tblColumnName" prefWidth="114.40003967285156" text="Name" />
+                  <TableColumn fx:id="tblColumnAddress" prefWidth="97.5999755859375" text="Address" />
+                  <TableColumn fx:id="tblColumnContactName" minWidth="0.0" prefWidth="100.800048828125" text="Contact Name" />
+                  <TableColumn fx:id="tblColumnPhoneNbr" prefWidth="113.5999755859375" text="ContactPhoneNbr" />
+                  <TableColumn fx:id="tblColumnProductId" prefWidth="86.4000244140625" text="ProductId" />
+               </columns>
+            </TableView>
+            <Button layoutX="149.0" layoutY="2.0" mnemonicParsing="false" onAction="#btnSearch_onClick" text="Search" />
+            <TextField fx:id="txtFieldSearch" layoutY="2.0" promptText="Search ID" />
+            <TextField fx:id="txtFieldSupplierId" layoutX="628.0" layoutY="56.0" prefHeight="25.0" prefWidth="107.0" promptText="Supplier Id" />
+            <TextField fx:id="txtFieldSupplierName" layoutX="628.0" layoutY="84.0" prefHeight="25.0" prefWidth="107.0" promptText="Supplier Name" />
+            <Button layoutX="587.0" layoutY="302.0" mnemonicParsing="false" onAction="#btnCreate_onClick" prefHeight="25.0" prefWidth="148.0" text="Create" />
+            <Button layoutX="587.0" layoutY="366.0" mnemonicParsing="false" onAction="#btnDelete_onClick" prefHeight="25.0" prefWidth="148.0" text="Delete" />
+            <Button layoutX="587.0" layoutY="333.0" mnemonicParsing="false" onAction="#btnUpdate_onClick" prefHeight="25.0" prefWidth="148.0" text="Update" />
+            <TextField fx:id="txtFieldSupplierAddress" layoutX="639.0" layoutY="111.0" prefHeight="25.0" prefWidth="96.0" promptText="Address" />
+            <TextField fx:id="txtFieldContactName" layoutX="587.0" layoutY="159.0" prefHeight="25.0" prefWidth="148.0" promptText="Contact Name" />
+            <TextField fx:id="txtFieldPhoneNbr" layoutX="587.0" layoutY="209.0" prefHeight="25.0" prefWidth="148.0" promptText="Contact Phone Number" />
+            <Button layoutX="200.0" layoutY="2.0" mnemonicParsing="false" onAction="#btnAll_onClick" text="All" />
+            <ComboBox fx:id="comboId" layoutX="586.0" layoutY="261.0" prefWidth="150.0" />
+            <Label layoutX="590.0" layoutY="60.0" text="ID:" />
+            <Label layoutX="590.0" layoutY="88.0" text="Name:" />
+            <Label layoutX="590.0" layoutY="115.0" text="Address:" />
+            <Label layoutX="591.0" layoutY="244.0" text="Product:" />
+            <Label layoutX="590.0" layoutY="190.0" text="Phone number:" />
+            <Label layoutX="590.0" layoutY="142.0" text="Contact Name:" />
+         </children></Pane>
+      <Label fx:id="lblSelected" layoutX="659.0" layoutY="30.0" opacity="0.0" />
+      <Text layoutX="163.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Suppliers" wrappingWidth="437.73675537109375">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
